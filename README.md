@@ -1,4 +1,4 @@
-# Day 16
+# Day 18
 
 There are separate branches for Segment 1 and Segment 2 in this repository. Both segments include two things:
 
