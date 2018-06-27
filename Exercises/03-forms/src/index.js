@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+
 const app = express();
 
 app.use(bodyParser.json()); // support json encoded bodies
@@ -26,7 +27,7 @@ app.get('/submit-form-with-get', (req, res) => {
 });
 
 app.post('/submit-form-with-post', (req, res) => {
-  res.send({ firstName: req.body.first, lastName: req.body.last});
+  res.send({ firstName: req.body.first, lastName: req.body.last });
 });
 
 app.listen(3000, () => {
