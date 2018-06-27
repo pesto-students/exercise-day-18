@@ -15,7 +15,6 @@ app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.use(express.static('public'));
 
-app.use('/languages', languageRoutes);
 
 app.get('/', (req, res) => {
   return res.redirect('/languages');
