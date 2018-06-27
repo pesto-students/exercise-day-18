@@ -13,7 +13,7 @@ There should be two routes handling get requests:
 
 2) `/movie/:title` is the second route.
 
-    Send text response: `My favorite movie is {title in request params}`
+    Send text response: `npm `
 
     When you open `localhost:3000/movie/godfather`, the browser window should show `My favorite movie is godfather`
 
