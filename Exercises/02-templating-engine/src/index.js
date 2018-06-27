@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 const languages = ['JavaScript', 'Haskell', 'Python'];
 
 app.get('/', (req, res) => {
-  return res.render('../views/languages', {
+  return res.render('languages', {
     languages,
   }); // Use res.render() to render the ejs file instead of sending text response
 });
