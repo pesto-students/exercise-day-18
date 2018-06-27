@@ -5,8 +5,13 @@ const app = express();
 // 1) Create Routes
 
 app.get('/', (req, res) => {
-  res.send('Serving the "/" page');
+  res.send('Hey, I am server response');
 });
+
+app.get('/movie/:title', (req, res) => {
+  const { title } = req.params;
+  res.send(`My favorite movie is ${title}`);
+})
 
 // 2) Start server on port 3000
 
