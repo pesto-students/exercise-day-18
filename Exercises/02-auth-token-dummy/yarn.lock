@@ -56,6 +56,11 @@ cookie@0.3.1:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
+cryptr@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cryptr/-/cryptr-4.0.0.tgz#f6932c14b1b5ee9e10d9708b10a4e7eafc2a14d0"
+  integrity sha512-5VMafoOA6thNyF17yx0UJZTAALvkfV6QlBfo+DTnWEv1KvnDU3J4xBLGroO5Q/hiPCHQ5HrNGtN5JJBStokJ5Q==
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"

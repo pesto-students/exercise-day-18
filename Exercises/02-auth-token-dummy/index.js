@@ -1,16 +1,23 @@
 const express = require('express');
+const Cryptr = require('cryptr');
+
+const cryptr = new Cryptr('mySuperSecretKey');
 
 const app = express();
 
-const topSecret = 'secret';
 const favMovies = ['FirstMovie', 'SecondMovie', 'ThirdMovie'];
+const token = [''];
 
 function encryptSecretly(u, p) {
-  return u + ':' + ':' + p + ':' + topSecret; // eslint-disable-line
+  return cryptr.encrypt(`${u}:${p}`);
 }
 function validate(authToken) {
-  return authToken === topSecret;
+  return authToken === cryptr.decrypt(token[0]);
 }
+app.get('/signup', (req, res) => {
+  token.push(encryptSecretly(req.query.username, req.query.password));
+  res.send(token[0]);
+});
 
 app.use((req, res, next) => { // eslint-disable-line
   if (!req.headers.authorization) {
@@ -24,10 +31,6 @@ app.use((req, res, next) => { // eslint-disable-line
 
 app.get('/', (req, res) => {
   res.json(favMovies);
-});
-app.get('/signup', (req, res) => {
-  const token = encryptSecretly(req.query.username, req.query.password);
-  res.send(token);
 });
 
 app.listen(3000);
